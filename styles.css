@@ -99,6 +99,7 @@ nav {
   position: sticky;
   top: 0;
   display: flex;
+  align-items: start;
   flex-direction: column;
   background-color: transparent;
   color: white;
@@ -106,7 +107,6 @@ nav {
   padding: 1vw 5vw;
   font-weight: normal;
   overflow: visible;
-  gap: 1vw;
   z-index: 1000;
   transition: all 400ms;
   /* background-color: var(--color-primary-1-low); */
@@ -114,8 +114,23 @@ nav {
 
 #nav-info {
   display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  padding: 1vw 5vw;
+  padding-bottom: 0;
+  font-weight: normal;
+  overflow: visible;
+  gap: 1vw;
+  z-index: 1000;
+  transition: all 400ms;
+  
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 89vw;
   background-color: transparent;
   height: 1.5vw;
   flex-direction: row;
@@ -178,7 +193,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-primary-3);
-  position: relative;
   width: 100%;
   box-sizing: border-box;
   height: 5vw;
@@ -190,8 +204,16 @@ nav {
   z-index: 100;
 }
 
+#nav-main .is-sticky {
+  /* Modifications to apply when sticky */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Example: Change box shadow */
+  background-color: var(--color-primary-2); /* Example: Change background color */
+  height: 4vw; /* Example: Change height */
+  padding: 0.5vw 1vw; /* Example: Adjust padding */
+}
+
 #nav-main #logo-img img {
-  width: 10vw;
+  width: 4vw;
 }
 
 #nav-main #nav-options {
@@ -596,8 +618,9 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 25vw;
   margin: 0px;
-  padding: px;
+  padding: 0px;
   transition: border 1s ease, transform 1s ease;
 }
 
@@ -663,9 +686,27 @@ nav {
   padding: 1vw 0px;
 }
 
+@media screen and (max-width: 768px) {
+  #body #services #tarj_price div div:nth-of-type(3) button {
+    background-color: var(--color-secondary-1);
+    margin-top: 1vw;
+    width: 20vw;
+    font-size: 2vw;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    padding: 1vw 3vw;
+    text-transform: uppercase;
+    transition: var(--color-secondary-2s) 1s ease;
+  }
+  
+}
+
 #body #services #tarj_price div div:nth-of-type(3) button {
   background-color: var(--color-secondary-1);
   margin-top: 1vw;
+  /* width: 20vw; */
+  /* font-size: 2vw; */
   border: none;
   border-radius: 0.5vw;
   color: white;
@@ -1184,11 +1225,67 @@ nav {
   }
 }
 
+#body #forms #f-content #map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55vw;
+  height: 33vw;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+
+#body #forms #f-content #map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2vw;
+}
+
+#c_wsp{
+  all: unset;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4vw;
+  height: 4vw;
+  position: fixed;
+  background-color: #25d366;
+  bottom: 2vw;
+  right: 2vw;
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+#c_wsp a{
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#c_wsp img{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 2vw;
+  filter: invert();
+  transition: all 250ms;
+}
+
+#c_wsp img:hover{
+  filter: invert(0);
+}
+
+
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 2vw;
+  padding: 2vw;
   background-color: var(--color-secondary-1);
   color: white;
 }
@@ -1201,27 +1298,34 @@ footer #main {
 
 footer #main img {
   max-width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
   border-radius: 2vw;
 }
+
+footer #main:nth-child(1) img{
+  display: flex;
+  align-self: center;
+  width: 10vw;
+}
+
 
 footer #main p:nth-child(1) {
   font-weight: bold;
 }
 footer #main p {
-  margin: 5px 0;
+  margin: 0.3vw 0;
 }
 
 footer #main a {
-  margin: 5px 0;
+  margin: 0.3vw 0;
 }
 
 footer #copy {
   grid-column: 1 / -1; /* Hace que el elemento ocupe todas las columnas */
-  font-size: 40px;
+  font-size: 2.6vw;
   font-weight: bold;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2vw;
 }
 
 footer .social-icons {
