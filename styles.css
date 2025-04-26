@@ -444,28 +444,28 @@ nav {
 }
 
 #body #services #services-cards-enterprise .card:nth-child(1) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-enterprise .card:nth-child(2) {
-  background-image: url("/media/photos/med-enterprise.jpg");
+  background-image: url("media/photos/med-enterprise.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-enterprise .card:nth-child(3) {
-  background-image: url("/media/photos/med-campain.jpg");
+  background-image: url("media/photos/med-campain.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-enterprise .card:nth-child(4) {
-  background-image: url("/media/photos/med-ocupational.jpg");
+  background-image: url("media/photos/med-ocupational.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -564,42 +564,42 @@ nav {
 }
 
 #body #services #services-cards-personal .card:nth-child(1) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-personal .card:nth-child(2) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-personal .card:nth-child(3) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-personal .card:nth-child(4) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-personal .card:nth-child(5) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #body #services #services-cards-personal .card:nth-child(6) {
-  background-image: url("/media/photos/med-exam.jpg");
+  background-image: url("media/photos/med-exam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
