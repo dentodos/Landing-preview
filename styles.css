@@ -62,7 +62,7 @@ body {
 
 .caja-con-video-fondo {
   position: absolute;
-  width: 100%;
+  width: 99vw;
   height: 55vw;
   overflow: hidden;
   z-index: -1;
@@ -79,6 +79,7 @@ body {
   width: auto;
   height: auto;
 
+  max-width: 99vw;
   z-index: -2;
   display: block;
 }
@@ -150,6 +151,11 @@ nav {
   color: var(--color-primary-1);
 }
 
+#nav-info div:nth-child(1) p{
+  color: var(--color-secondary-2);
+  font-weight: bold;
+}
+
 #nav-info div:nth-child(2) {
   display: flex;
   flex-direction: row;
@@ -213,7 +219,7 @@ nav {
 }
 
 #nav-main #logo-img img {
-  width: 4vw;
+  width: 4.5vw;
 }
 
 #nav-main #nav-options {
@@ -235,15 +241,23 @@ nav {
 #nav-main #nav-options a:hover {
   font-size: 1vw;
   color: var(--color-primary-1);
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-primary-1); 
+  text-decoration-thickness: 0.25vw;
+  text-underline-offset: 0.5vw;
+  /* text-decoration: none; */
 }
 
-#nav-main #nav-options a:nth-child(7) {
+#nav-main #nav-options a:last-child{
   color: white;
   background-color: var(--color-primary-1);
   padding: 0.75vw 2vw;
   border-radius: 9999px;
   text-decoration: none;
+}
+
+#nav-main #nav-options a:last-child:hover{
+  color: black;
 }
 
 #body {
@@ -380,7 +394,6 @@ nav {
   overflow: hidden;
   height: 5vw;
   width: 5vw;
-  /* border: 1px solid red; */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -393,10 +406,11 @@ nav {
   filter: invert();
 }
 
-#body #services #services-cards-enterprise .card p {
+#body #services #services-cards-enterprise .card-text{
   padding: 1vw;
   font-size: 1vw;
   background-color: var(--color-primary-2);
+  text-align: start;
   border-radius: 1vw;
   margin: 0 1vw;
   color: white;
@@ -407,8 +421,23 @@ nav {
   transition: all 250ms;
 }
 
-/* #body #services #services-cards-enterprise .card a{
-    /* opacity: 0; */
+#body #services #services-cards-enterprise .card-text .ct-title{
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: start;
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise .card-text .ct-desc{
+  font-size: 0.05vw;
+  font-weight: bold;
+  text-align: start;
+  position: absolute;
+  bottom: 1vw;
+  left: 1vw;
+  opacity: 0;
+  transition: all ease-in 250ms;
+}
 
 #body #services #services-cards-enterprise .card a {
   display: flex;
@@ -475,15 +504,217 @@ nav {
   flex: 2;
 }
 
-#body #services #services-cards-enterprise .card:hover p {
+#body #services #services-cards-enterprise .card:hover .card-text {
   bottom: 5vw;
   left: 1vw;
 }
 
-#body #services #services-cards-enterprise .card:hover a {
-  opacity: 100;
+#body #services #services-cards-enterprise .card:hover .card-text .ct-desc:not(:empty) {
+  position: initial;
+  text-align: start;
+  font-weight: normal;
+  font-size: 0.75vw;
+  opacity: 1;
 }
 
+#body #services #services-cards-enterprise .card:hover a {
+  opacity: 1;
+}
+/* ############################################################## */
+
+#body #services #services-cards-enterprise-2 {
+  display: flex;
+  gap: 1vw;
+}
+
+#body #services #services-cards-enterprise-2 .card {
+  background-color: var(--color-primary-1-low);
+  height: 25vw;
+  width: 20vw;
+  flex: 1;
+  border-radius: 1vw;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card .c-bg-color{
+  width: 100%;
+  height: 100%;
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card .card-icon {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  overflow: hidden;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-2);
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card .card-icon img {
+  width: 3vw;
+  filter: invert();
+}
+
+#body #services #services-cards-enterprise-2 .card-text{
+  padding: 1vw;
+  font-size: 1vw;
+  background-color: var(--color-primary-2);
+  text-align: start;
+  border-radius: 1vw;
+  margin: 0 1vw;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 1vw;
+  left: 0vw;
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card-text .ct-title{
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: start;
+  transition: all 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card-text .ct-desc{
+  font-size: 0.05vw;
+  font-weight: bold;
+  text-align: start;
+  position: absolute;
+  bottom: 1vw;
+  left: 1vw;
+  opacity: 0;
+  transition: all ease-in 250ms;
+}
+
+#body #services #services-cards-enterprise-2 .card a {
+  display: flex;
+  flex-direction: row;
+  font-family: "Gotham Rounded", Arial, sans-serif;
+  justify-content: space-between;
+  margin-left: 1vw;
+  padding: 1vw;
+  width: 12vw;
+  color: white;
+  border-radius: 1vw;
+  transition: all 250ms;
+  border: none;
+  background-color: var(--color-primary-1);
+  position: absolute;
+  bottom: 1vw;
+  opacity: 0;
+  left: 1vw;
+  text-decoration: none;
+}
+
+#body #services #services-cards-enterprise-2 .card a p:nth-child(1) {
+  all: unset;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+#body #services #services-cards-enterprise-2 .card a img {
+  width: 1vw;
+  margin-right: 1vw;
+  filter: invert();
+}
+
+#body #services #services-cards-enterprise-2 .card:nth-child(1) {
+  background-image: url("media/photos/med-exam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#body #services #services-cards-enterprise-2 .card:nth-child(2) {
+  background-image: url("media/photos/med-enterprise.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#body #services #services-cards-enterprise-2 .card:nth-child(3) {
+  background-image: url("media/photos/med-campain.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#body #services #services-cards-enterprise-2 .card:nth-child(4) {
+  background-image: url("media/photos/med-ocupational.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .c-bg-color {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary-1-medium);
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .card-icon{
+  background-color: var(--color-secondary-1);
+  top: 1vw;
+  left: calc(15vw/2);
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .card-text {
+  all: unset;
+  position: absolute;
+  text-align: center;
+  padding: 0 1vw;
+  width: 80%;
+  top: 8vw;
+  left: 50%;
+  transform: translate(-50%);
+  height: min-content;
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .card-text .ct-title{
+  text-align: center;
+  justify-self: center;
+  color: white;
+  width: 90%;
+  padding: 0.5vw;
+  border-bottom: 0.2vw solid white;
+  margin-bottom: 1vw;
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .card-text .ct-desc{
+  all: unset;
+  text-align: center;
+  color: white;
+}
+
+#body #services #services-cards-enterprise-2 .card:hover .card-text .ct-desc:not(:empty) {
+  position: initial;
+  text-align: start;
+  font-weight: normal;
+  font-size: 0.75vw;
+  opacity: 1;
+}
+
+#body #services #services-cards-enterprise-2 .card:hover a {
+  opacity: 1;
+}
+
+/* ############################################################## */
 #body #services #services-cards-personal {
   width: 90vw;
   display: grid;
@@ -1057,7 +1288,6 @@ nav {
   gap: 3vw;
   margin: 0;
   padding: 0;
-  margin-bottom: -1vw;
   margin-left: -5vw;
   color: white;
   /* border: 1px solid red; */
@@ -1198,6 +1428,11 @@ nav {
   color: green;
 }
 
+#body #forms #f-content .form label .input:invalid:not(:placeholder-shown) + span {
+  color: red;
+}
+
+
 #body #forms #f-content .submit {
   border: none;
   outline: none;
@@ -1281,7 +1516,109 @@ nav {
 }
 
 
+#body #reviews {
+  width: 85vw;
+  margin-left: -6vw ;
+  padding: 0 7.5vw;
+  background-color:rgb(44, 169, 219, 0.725);
+  padding-bottom: 2vw;
+  margin-bottom: -1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+#body #reviews #r-title{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 2.5vw;
+}
+
+#body #reviews #r-c-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+}
+
+#body #reviews .card {
+  max-width: 24vw; 
+  border-width: 0.1vw; 
+  border-style: solid;
+  border-color: #d1d5db; 
+  border-radius: 0.5vw; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+  background-color: #ffffff; 
+  padding: 1.5vw; 
+}
+
+
+#body #reviews .card > * + * {
+  margin-top: 1vw; 
+}
+
+#body #reviews .card-profile-section {
+  display: flex; 
+  align-items: center; 
+}
+
+#body #reviews .card-profile-section > * + * {
+  margin-left: 1vw; 
+}
+
+#body #reviews .avatar {
+  height: 3vw; 
+  width: 3vw; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #ef4444;
+  color: #ffffff; 
+  font-size: 1.125vw;
+  font-weight: bold; 
+  border-radius: 9999px; 
+}
+
+#body #reviews .user-name {
+  color: #111827; 
+  font-weight: 500; 
+}
+
+#body #reviews .user-title {
+  color: #4b5563; 
+  font-size: 0.875vw; 
+}
+
+#body #reviews .rating-stars {
+  display: flex;   
+  color: #ef4444; 
+  font-size: 1.25vw; 
+}
+
+#body #reviews .review-text {
+  color: #374151; 
+  line-height: 1.625; 
+  font-size: 1vw;
+}
+
+#body #reviews .read-more-link {
+  color: #ef4444; 
+  font-weight: 500; 
+  cursor: pointer; 
+}
+
+#body #reviews .read-more-link:hover {
+  text-decoration: underline; 
+}
+
+
+
+
+
 footer {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2vw;
